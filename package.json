@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/aleksandrenko/redux-action-store#readme",
   "dependencies": {
-    "unique-random-array": "1.0.0"
+    "redux": "^3.5.2"
   },
   "devDependencies": {
     "babel-cli": "6.7.5",
