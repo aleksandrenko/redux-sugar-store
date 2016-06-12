@@ -24,9 +24,10 @@
     "url": "https://github.com/aleksandrenko/redux-action-store.git"
   },
   "keywords": [
-    "random",
-    "star",
-    "wars"
+    "redux",
+    "store",
+    "actions",
+    "reducers"
   ],
   "files": [
     "dist",
