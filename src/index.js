@@ -1,16 +1,16 @@
-
 import { createStore } from 'redux';
 import getTypes from './utils/types';
 import generateActions from './utils/actions';
 
 /**
+ * The store root reducer
  * @param state
  * @param action
  * @returns {*}
  */
 const rootReducer = (state, action) => {
   let _state = state;
-
+s
   rootReducer.reducers.forEach((reducer) => {
     const reducerName = Object.keys(reducer)[0];
     const reducerFunction = reducer[reducerName];
@@ -26,7 +26,7 @@ const rootReducer = (state, action) => {
 
 
 /**
- *
+ * Default Redux store
  * @param {Object} initialState - the inital state of the store
  * @param {Array} reducers - an array of object used for reducers
  * @returns {Object} Redux store
