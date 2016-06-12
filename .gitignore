@@ -1,0 +1,15 @@
+# Build folder
+dist
+
+# IDE
+.idea
+
+# Module folder
+node_modules
+
+# Log files
+*.log
+
+# Tests coverage
+coverage
+
