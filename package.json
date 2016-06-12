@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aleksandrenko/redux-action-store.git"
+    "url": "https://github.com/aleksandrenko/redux-sugar-store.git"
   },
   "keywords": [
     "redux",
@@ -36,9 +36,9 @@
   "author": "Nikolay Aleksandrenko <aleksandrneko@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aleksandrenko/redux-action-store/issues"
+    "url": "https://github.com/aleksandrenko/redux-sugar-store/issues"
   },
-  "homepage": "https://github.com/aleksandrenko/redux-action-store#readme",
+  "homepage": "https://github.com/aleksandrenko/redux-sugar-store#readme",
   "dependencies": {
     "redux": "^3.5.2"
   },
