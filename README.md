@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/aleksandrenko/redux-sugar-store.svg?branch=master)](https://travis-ci.org/aleksandrenko/redux-sugar-store)
+[![Build Status](https://travis-ci.org/aleksandrenko/redux-sugar-store.svg?branch=master)](https://travis-ci.org/aleksandrenko/redux-sugar-store) [![GitHub issues](https://img.shields.io/github/issues/aleksandrenko/redux-sugar-store.svg)](https://github.com/aleksandrenko/redux-sugar-store/issues) [![GitHub version](https://badge.fury.io/gh/aleksandrenko%2Fredux-sugar-store.svg)](https://badge.fury.io/gh/aleksandrenko%2Fredux-sugar-store)
 
 # redux-sugar-store
 Redux store sprinkled with sugar.
