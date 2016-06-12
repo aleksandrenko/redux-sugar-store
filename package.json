@@ -30,6 +30,7 @@
     "reducers"
   ],
   "files": [
+    "index.js",
     "dist",
     "README.md"
   ],
@@ -39,9 +40,7 @@
     "url": "https://github.com/aleksandrenko/redux-sugar-store/issues"
   },
   "homepage": "https://github.com/aleksandrenko/redux-sugar-store#readme",
-  "dependencies": {
-    "redux": "^3.5.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "6.7.5",
     "babel-loader": "6.2.4",

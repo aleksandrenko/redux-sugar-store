@@ -1,6 +1,47 @@
-import { createStore } from 'redux';
-import getTypes from './utils/types';
-import generateActions from './utils/actions';
+const NOT_ALLOWED_TYPES = [
+  'dispatch',
+  'getstate',
+  'replaceReducer',
+  'subscribe',
+  'symbol',
+  'mapStoreToProps',
+  'reducers'
+];
+
+
+/**
+ * Get all types
+ * @param {Array} reducers - an array with all reducers
+ * @returns {Array} types - an array with the names of all redusers
+ */
+const getTypes = (reducers) => reducers.reduce((acc, reducer) => {
+  const type = Object.keys(reducer)[0];
+  const NOT_EXISTING_INDEX = -1;
+
+  if (NOT_ALLOWED_TYPES.indexOf(type.toLowerCase()) !== NOT_EXISTING_INDEX) {
+    throw Error(`rdxStore can not accept reducer named "${type}".`);
+  }
+
+  acc.push(type);
+
+  return acc;
+}, []);
+
+
+/**
+ * generateActions
+ * @param {Array} types - An array with all reducers
+ * @returns {Object} Actions
+ */
+const generateActions = (types) => types.reduce((actions, type) => {
+  actions[type] = (payload) => ({
+    type,
+    payload
+  });
+
+  return actions;
+}, {});
+
 
 /**
  * The store root reducer
@@ -26,12 +67,13 @@ const rootReducer = (state, action) => {
 
 
 /**
- * Default Redux store
- * @param {Object} initialState - the inital state of the store
- * @param {Array} reducers - an array of object used for reducers
- * @returns {Object} Redux store
+ * A store creater
+ * @param {function} createStore - redux function
+ * @param {Object} initialState - the store initial data
+ * @param {Array} reducers - array of functions/reducers
+ * @returns {Object} store - Redux store
  */
-const rdxStore = (initialState = {}, reducers = []) => {
+const storeCreator = (createStore, initialState = {}, reducers = []) => {
   rootReducer.reducers = reducers;
 
   // Create the Redux store with the root reducer and the initial state
@@ -58,4 +100,4 @@ const rdxStore = (initialState = {}, reducers = []) => {
   return store;
 };
 
-export default rdxStore;
+export default storeCreator;

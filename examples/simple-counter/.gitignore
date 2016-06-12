@@ -1,0 +1,11 @@
+# Build folder
+dist
+
+# Module folder
+node_modules
+
+# Log files
+*.log
+
+# Tests coverage
+coverage

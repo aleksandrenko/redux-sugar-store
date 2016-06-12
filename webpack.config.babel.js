@@ -7,7 +7,7 @@ export default {
   output: {
     path: join(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'starWarsNames'
+    library: 'reduxSugarStore'
   },
   devtool: 'source-map',
   module: {
