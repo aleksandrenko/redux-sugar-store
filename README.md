@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aleksandrenko/redux-sugar-store.svg?branch=master)](https://travis-ci.org/aleksandrenko/redux-sugar-store)
+
 # redux-sugar-store
 Redux store sprinkled with sugar.
 redux-sugar-store will get all reducers and create a standart actions ({type ..., payload ...}) with the same name.
