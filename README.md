@@ -1,4 +1,4 @@
-https://travis-ci.org/aleksandrenko/redux-sugar-store.svg?branch=master
+[![Build Status](https://travis-ci.org/aleksandrenko/redux-sugar-store.svg?branch=master)](https://travis-ci.org/aleksandrenko/redux-sugar-store)
 
 # redux-sugar-store
 Redux store sprinkled with sugar.
