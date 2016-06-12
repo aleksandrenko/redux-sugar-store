@@ -4,24 +4,24 @@ import generateActions from './utils/actions';
 
 /**
  * The store root reducer
- * @param state
- * @param action
- * @returns {*}
+ * @param {Object} state - Redux store state
+ * @param {Object} action - Redux action
+ * @returns {Object} state - The new Redux state
  */
 const rootReducer = (state, action) => {
-  let _state = state;
-s
+  let newState = state;
+
   rootReducer.reducers.forEach((reducer) => {
     const reducerName = Object.keys(reducer)[0];
     const reducerFunction = reducer[reducerName];
 
     // run the reducer for the called action.type
     if (reducerName === action.type) {
-      _state = reducerFunction(_state, action);
+      newState = reducerFunction(newState, action);
     }
   });
 
-  return _state;
+  return newState;
 };
 
 
@@ -44,18 +44,18 @@ const rdxStore = (initialState = {}, reducers = []) => {
   const actions = generateActions(allTypes);
 
   // used as second param to connect function from redux-react
-  store.mapStoreToProps = (dispatch) => ({ store });
+  store.mapStoreToProps = () => ({ store });
 
   // Add Action Methods directly to the store
   allTypes.forEach((type) => {
     store[type] = (payload) => {
       const reduxAction = actions[type](payload);
+
       store.dispatch(reduxAction);
     };
   });
 
   return store;
 };
-
 
 export default rdxStore;

@@ -7,8 +7,9 @@ import NOT_ALLOWED_TYPES from './disallowed';
  */
 export default (reducers) => reducers.reduce((acc, reducer) => {
   const type = Object.keys(reducer)[0];
+  const NOT_EXISTING_INDEX = -1;
 
-  if (NOT_ALLOWED_TYPES.indexOf(type.toLowerCase()) !== -1) {
+  if (NOT_ALLOWED_TYPES.indexOf(type.toLowerCase()) !== NOT_EXISTING_INDEX) {
     throw Error(`rdxStore can not accept reducer named "${type}".`);
   }
 
