@@ -41,3 +41,71 @@ const ListConnected = connect((store) => ({
   user: store.users
 }), store.mapStoreToProps)(List);
 ```
+
+
+# Redux Vanila
+
+###### file: "actions.js"
+``` html
+/*
+ * action types
+ */
+export const EXAMPLE_ACTION = 'EXAMPLE_ACTION';
+export const ANOTHER_ACTION = 'ANOTHER_ACTION';
+
+/*
+ * action creators
+ */
+export function exampleAction(payload) {
+  return { type: EXAMPLE_ACTION, payload }
+}
+
+export function anotherAction(payload) {
+  return { type: ANOTHER_ACTION, payload }
+}
+```
+
+
+
+###### file: "reducers.js"
+
+``` html
+import { EXAMPLE_ACTION, ANOTHER_ACTION } from './actions';
+
+/*
+ * reducers
+ */
+function rootReducer(state = initialState, action) {
+  switch (action.type) {
+    case EXAMPLE_ACTION:
+      return state
+    case ANOTHER_ACTION:
+      return state
+    default:
+      return state
+  }
+}
+
+export default rootReducer;
+```
+
+###### file: "store.js"
+
+``` html
+import rootReducer from './reducers';
+import { createStore } from 'redux'
+
+const store = createStore(rootReducer);
+
+export default store;
+```
+
+
+
+###### Dispatch actions:
+
+``` html
+import { exampleAction, anotherAction } from './actions';
+
+store.dispatch(exampleAction(payload));
+```
