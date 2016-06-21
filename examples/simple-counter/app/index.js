@@ -13,7 +13,8 @@ import Error404 from './pages/Error404';
 store.incrementCounter();
 
 const HomePageConnected = connect((store) => ({
-  counter: store.counter
+  counter: store.counter,
+  status: store.status
 }), store.mapStoreToProps)(HomePage);
 
 // ROUTES
