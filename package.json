@@ -1,6 +1,6 @@
 {
   "name": "redux-sugar-store",
-  "version": "0.0.0-semantically-released",
+  "version": "1.0.0-semantically-released",
   "description": "Small Redux store creator with the main goal to make creating small and mediul react/redux apps easier. It's hiding the action and making dispatching look like calling a simple function/reducer. The default behavior of the redux store, actions and reducers is not changed.",
   "main": "dist/index.js",
   "scripts": {
