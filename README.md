@@ -7,6 +7,12 @@ It will create methods in the store so actions can be dispatched directly like p
 
 (depending on redux)
 
+#### Install
+
+```
+npm i -S redux-sugar-store
+```
+
 #### Sample usage:
 ``` html
 import sugarStore from 'redux-sugar-store';
